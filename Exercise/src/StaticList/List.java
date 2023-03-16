@@ -6,27 +6,32 @@ public class List {
     private int maxSize;
 
     //create the list
-    public void SeqList(){
+    public void seqList(){
         maxSize = 100;
         currentSize = 0;
         data = new int[maxSize];
     }
 
-    public boolean Empty(){
+    //verificar se a lista está vazia
+    public boolean empty(){
         if (maxSize == 0 ) return true;
         else return false;
     }
 
-    public boolean Full(){
+    //verificar se a lista está cheia
+    public boolean full(){
         if (currentSize == maxSize) return true;
         else return false;
     }
 
-    public int Size(){
+    //obtém o tamanho atual da lista
+    public int size(){
         return currentSize;
     }
 
-    public int Element(int pos){
+    //Obtém o i-ésimo elemento de uma lista.
+      //      Retorna -1 se a posição for inválida
+    public int element(int pos){
         int dado;
 
         if ((pos > currentSize) || (pos <= 0))
@@ -35,8 +40,13 @@ public class List {
         return dado;
     }
 
-    public boolean Insert (int pos, int dado){
-        if (Full() || (pos > currentSize+1) || (pos<=0)){
+
+
+    /**Insere um elemento em uma determinada posição.
+     Retorna true se a insercao funcionar e
+     false caso contrário. */
+    public boolean insert (int pos, int dado){
+        if (full() || (pos > currentSize+1) || (pos<=0)){
             return false;
         }
         for (int i = currentSize; i >= pos; i--){
@@ -47,6 +57,9 @@ public class List {
         return true;
     }
 
+    /** Remove um elemento de uma determinada posição
+     Retorna o valor do elemento removido e
+     -1 caso a remoção falhe */
     public int Remove(int pos){
         int dado;
         if ((pos > currentSize) || (pos < 1 ))
