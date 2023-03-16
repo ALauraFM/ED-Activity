@@ -14,7 +14,7 @@ public class List {
 
     //verificar se a lista está vazia
     public boolean empty(){
-        if (maxSize == 0 ) return true;
+        if (currentSize == 0 ) return true;
         else return false;
     }
 

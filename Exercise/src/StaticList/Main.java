@@ -8,6 +8,7 @@ public class Main {
 
 
         List list = new List();
+        list.seqList();
         Scanner sc = new Scanner(System.in);
         do {
             System.out.println("""
@@ -26,14 +27,20 @@ public class Main {
 
                 case 1:
                     if (list.empty()) {
-                        System.out.println("Lista vazia");
-                        break;
+                        System.out.println("A lista está vazia");
+
+                    }else{
+                        System.out.println("A lista não está vazia");
                     }
+                    break;
                 case 2:
-                    if (!list.empty()) {
-                        System.out.println("Lista cheia");
-                        break;
+                    if (list.full()) {
+                        System.out.println("A lista está cheia");
+
+                    }else{
+                        System.out.println("A lista não está cheia");
                     }
+                    break;
                 case 3:
                     System.out.println(list.size());
                     break;
@@ -54,19 +61,25 @@ public class Main {
                     } else {
                         System.out.println("""
                                 Você gostaria de inserir ou retirar um elemento na lista?
-                                a)Inserir
-                                b)Retirar""");
-                        char modify;
-                        modify = sc.next().charAt(0);
+                                1)Inserir
+                                2)Retirar""");
+                        int modify;
+                        modify = sc.nextInt();
 
-                        if (modify == 'a') {
+                        if (modify == 1) {
                             System.out.println("Qual elemento você gostaria de inserir e em qual posição?");
                             int pos, element;
                             System.out.println("Elemento:");
                             element = sc.nextInt();
                             System.out.println("Posição:");
                             pos = sc.nextInt();
-                            System.out.println(list.insert(pos, element));
+                            list.insert(pos, element);
+                        }else{
+                            System.out.println("Digite a posição da qual você quer remover o elemento:");
+                            int posi;
+                            posi = sc.nextInt();
+                            list.Remove(posi);
+
                         }
                     }
 
