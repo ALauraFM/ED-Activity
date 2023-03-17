@@ -86,6 +86,7 @@ public class Main {
             }
 
         }while(option != 5);
-       list.showList();
+        System.out.println("Lista:");
+        list.showList();
     }
 }
