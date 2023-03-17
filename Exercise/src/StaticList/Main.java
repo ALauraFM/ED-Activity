@@ -16,8 +16,7 @@ public class Main {
                     1-)Verificar se a lista está vazia
                     2-)Verificar se a lista está cheia
                     3-)Obter o tamanho da lista
-                    4-)Obter/modificar o valor do elemento de uma determinada
-                    posição na lista
+                    4-)Obter/modificar o valor do elemento de uma determinada posição na lista
                     5-)Sair"""
             );
 
