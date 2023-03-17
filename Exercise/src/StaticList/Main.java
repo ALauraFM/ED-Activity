@@ -86,5 +86,6 @@ public class Main {
             }
 
         }while(option != 5);
+       list.showList();
     }
 }

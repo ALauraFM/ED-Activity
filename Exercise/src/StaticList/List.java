@@ -30,7 +30,7 @@ public class List {
     }
 
     //Obtém o i-ésimo elemento de uma lista.
-      //      Retorna -1 se a posição for inválida
+      // Retorna -1 se a posição for inválida
     public int element(int pos){
         int dado;
 
@@ -70,6 +70,17 @@ public class List {
         }
         currentSize--;
         return dado;
+    }
+    public void showList(){
+        if (!empty()) {
+            //Exibindo a lista (não vazia)
+            for (int i = 0; i < currentSize; i++) {
+                System.out.printf("%d\n", data[i]);
+            }
+
+        } else {
+            System.out.println("A lista está vazia");
+        }
     }
 
 
